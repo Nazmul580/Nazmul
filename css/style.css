@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-clr);
+}
+
+:root {
+    --bg-clr: #222;
+    --text-clr: #ffffff;
+    --secndery-clr: #3b82f6;
+    --secndery-text-clr: #808080;
+    --pera-clr: #777;
+    --btn-hvr-clr: #d5d5d5;
+}
+
+html {
+    font-size: 62.5%;
+    background: var(--bg-clr);
+
+}
+
+body {
+    max-width: 1536px;
+    margin: 0 auto;
+
+}
+
+.container {
+    width: calc(100% - 7%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0rem;
+}
+
+/* header section start here  */
+#header-section {
+    padding: 2rem 0rem;
+    position: sticky;
+    top: 0;
+    border-bottom: .1rem solid #333;
+    background: rgba(34, 34, 34, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 6rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    letter-spacing: .2rem;
+}
+
+.logo-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-menu i {
+    display: none;
+    font-size: 1.8rem;
+}
+
+menu.nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+menu.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    color: var(--text-clr);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--secndery-clr);
+    }
+}
+.nav-menu ul .nav-active a {
+    color: var(--secndery-clr);
+}
+/* header section end here  */
+
+/* hero sectio are start here  */
+.hero-section-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.hero-img img {
+    width: 30rem;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+}
+
+h1.hero-title {
+    font-size: 4rem;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+p.hero-pera {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+
+
+/* hero section css end here  */
+
+/* resume section are start here  */
+
+.resume-title {
+    font-size: 4.8rem;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.experince-section,
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0rem;
+}
+
+.experince-img img,
+.education-img img {
+    width: 40rem;
+}
+
+.experince-img,
+.education-img {
+    display: flex;
+    justify-content: center;
+}
+
+.section-title h3 {
+    font-size: 2rem;
+}
+
+.section-title {
+    width: fit-content;
+    padding: .5rem 0rem;
+}
+
+.title-bottom-line {
+    width: 100%;
+    height: .2rem;
+    background: gray;
+    margin-top: .2rem;
+    position: relative;
+
+    &&::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background: var(--secndery-clr);
+    }
+}
+
+.experince-box,
+.education-box {
+    display: grid;
+    align-items: center;
+    padding: 2rem 0rem;
+    padding-left: 3rem;
+    position: relative;
+    border-left: .1rem solid #333;
+    grid-template-columns: 1fr 1fr;
+
+    &&::after {
+        content: '';
+        position: absolute;
+        bottom: 34%;
+        left: -1.3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: .1rem solid #333;
+        border-radius: 50%;
+        background: var(--bg-clr);
+    }
+}
+
+.experince-box .date p,
+.education-box .date p {
+    background: black;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    width: fit-content;
+}
+
+.disciption .company-name {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.disciption .possition {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: gray;
+}
+
+/* resume section css end here  */
+
+.certificate-box-wraper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 2rem;
+    column-gap: 2rem;
+    row-gap: 4rem;
+}
+
+.certificate-box {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    border: .2rem solid #444;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    &&:hover {
+        transform: translateY(-.8rem);
+    }
+}
+
+.ic-img img {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: .8rem;
+    border-top-left-radius: .8rem;
+    background: #444;
+}
+
+.certificate-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #444;
+}
+
+.certificate-img img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.certificate-info {
+    padding: 1rem 2rem;
+}
+
+h1.course-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #f5f5f5;
+}
+
+.certificate-info p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: .8rem 0rem;
+    color: #777;
+}
+
+.live-link a {
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: .8rem 0rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: #777;
+}
+
+.live-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.live-link img {
+    width: 1.4rem;
+}
+
+.section-title-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    border: .2rem solid var(--btn-hvr-clr);
+    border-radius: 2rem;
+    padding: 1.5rem 2.5rem;
+    background: #333;
+    font-size: 1.2rem;
+    transition: all .2s;
+    font-weight: 600;
+
+
+
+    &&:hover {
+        background: var(--btn-hvr-clr);
+        color: #222;
+    }
+}
+.certificate-btn {
+    display: flex;
+    justify-content: center;
+}
+.btn-wrap {
+    text-align: center;
+}
+
+/* certificate section are end here  */
+
+.skill-section-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 5rem 0rem;
+}
+
+h1.skill-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.progress-bar {
+    background: var(--secndery-text-clr);
+    width: 100%;
+    height: .5rem;
+    border-radius: 1rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--secndery-clr);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.skill-box {
+    margin-bottom: 3rem;
+}
+
+h1.skill-name {
+    font-size: 1.3rem;
+}
+
+.skill-info p {
+    font-size: 1.1rem;
+    color: var(--secndery-text-clr);
+}
+
+/* skill section are end here  */
+
+
+/* protfolio section are start here  */
+
+.protfolio-car-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 6rem 0rem;
+    column-gap: 3rem;
+    row-gap: 5rem;
+}
+
+.protfolio-img img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.protfolio-info {
+    border: .1rem solid #888;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 0rem;
+    padding: 2rem;
+
+
+    &&:hover {
+        background: #333;
+    }
+}
+
+.protfolio-img {
+    width: 100%;
+    margin-bottom: -.2rem;
+}
+
+.protfolio-info .title {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+}
+
+.protfolio-info .discription {
+    text-align: justify;
+    margin-bottom: 1.6rem;
+    color: var(--secndery-text-clr);
+    font-size: 1.2rem;
+}
+
+.protfolio-info .live-link {
+    margin-bottom: 1.6rem;
+}
+
+/* protfolio section are end here  */
+
+
+/* contact section are start here  */
+
+.contact-form-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem 0rem;
+}
+
+.form-wraper {
+    grid-column: 2/-1;
+}
+
+form.contact-from {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.address-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    max-height: 25rem;
+}
+
+
+
+.address-box i {
+    font-size: 1.6rem;
+    color: var(--secndery-clr);
+}
+
+.address-box h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.form-title {
+    padding-bottom: 3rem;
+}
+
+form.contact-from input,
+form.contact-from textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    outline: none;
+    padding: 1rem;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: .2rem solid var(--secndery-text-clr);
+}
+
+.contact-from div {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.from-textbox {
+    max-width: 100%;
+    min-height: 15.8rem;
+}
+.contact-btn{
+    padding-top: 3rem;
+}
+
+.contact-btn .btn{
+    border-color: var(--secndery-clr);
+    font-size: 1.6rem;
+
+    &&:hover{
+        background: var(--secndery-clr);
+        color: #fff;
+    }
+}
+/* contact section are end here  */
+
+/* footer section are start here  */
+#footer-section{
+    border-top: .2rem solid #333;
+    padding: 2rem 0rem;
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-icon ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-social-icon ul li {
+    list-style: none;
+}
+
+.footer-social-icon ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #d5d5d5;
+    cursor: pointer;
+}
+.footer-inner p{
+    font-size: 1.4rem;
+    color: #d5d5d5;
+}
+
+/* footer section are start here  */
+
+
+
+
+/* responsive css are here  */
+
+/* css for mobile view  */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .hero-section-inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-img {
+        margin-bottom: 2rem;
+    }
+
+    .experince-section,
+    .education-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 0rem-;
+    }
+
+    .certificate-box-wraper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skill-section-inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .protfolio-car-wraper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact-form-wrap {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5rem 0rem;
+    }
+    
+    .form-wraper {
+        grid-column: 1/-1;
+    }
+    form.contact-from {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form-title {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+}
+
+
+/* css for tablate veiw  */
+
+
+@media (max-width: 998px) {
+    html {
+        font-size: 55%;
+    }
+
+
+    /* header css start here  */
+
+    .nav-bar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hamburger-menu i {
+        display: block;
+    }
+
+    menu.nav-menu {
+        justify-content: center;
+        align-items: flex-start;
+        height: 0px;
+    }
+
+    menu.nav-menu.nav-expanded {
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    menu.nav-menu ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* header css end here  */
+
+
+}
